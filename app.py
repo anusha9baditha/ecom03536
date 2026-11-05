@@ -33,9 +33,9 @@ from io import BytesIO
 BASE_DIR=os.path.dirname(os.path.abspath(__file__))
 static_path=os.path.join(BASE_DIR,'static','uploads')
 os.makedirs(static_path,exist_ok=True)
-mydb = connection.MySQLConnection(user='flaskuser', password='password',
+mydb = connection.MySQLConnection(user='flaskuser', password='admin123',
                                  host='localhost',
-                                 database='flaskdb')
+                                 database='ecomdb')
 app=Flask(__name__)
 CORS(app,supports_credentials=True,origins=["http://localhost:5173","http://127.0.0.1:5173"])
 app.secret_key="code@123"
